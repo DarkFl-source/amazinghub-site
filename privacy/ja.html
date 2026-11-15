@@ -1,0 +1,47 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>HappyM — プライバシーポリシー</title><style>
+body{font-family:system-ui,sans-serif;background:#1B1530;color:#eee;margin:0;padding:24px;line-height:1.55}
+main{max-width:760px;margin:0 auto} h1{color:#fff} h2{color:#C9B6FF;margin-top:1.8em} a{color:#FFC857}
+li{margin:.3em 0} .muted{color:#aaa}
+</style></head>
+<body><main>
+<p class="lang"><a href="index.html">Português</a> · <a href="en.html">English</a> · <a href="es.html">Español</a> · <a href="ja.html">日本語</a> · <a href="zh-TW.html">繁體中文</a></p>
+<h1>HappyM プライバシーポリシー</h1>
+<p class="muted">最終更新日：2026年11月15日</p>
+<p>HappyM は、<strong>あなたが Google フォトで選んだ</strong>写真を、<strong>あなたがスマートフォンから送った</strong>音楽と一緒にスライドショーで表示する Android TV アプリです。HappyM は<strong>サーバーを持ちません</strong>。アプリが保存するものはすべてあなたのテレビの中にあります。</p>
+
+<h2>1. HappyM がアクセスするデータ</h2>
+<ul>
+<li><strong>Google フォトで選んだ写真。</strong>HappyM は Google Photos Picker API を <code>photospicker.mediaitems.readonly</code> 権限で使用します。この権限でアクセスできるのは、選択のたびにあなたが選んだ写真<em>だけ</em>です。ライブラリのほかの写真は見えません。</li>
+<li><strong>選んだ写真のデータ：</strong>画像ファイル（テレビの画面サイズに縮小）、日付、サイズ。スライドショーの表示と並べ替えに使います。</li>
+<li><strong>Google のアクセス認証情報：</strong>更新トークン（refresh token）。毎回接続し直さなくて済むよう、システムの鍵（Android Keystore）で<strong>暗号化</strong>してテレビに保存します。</li>
+<li><strong>スマートフォンから送った曲。</strong>ローカルの Wi-Fi 経由で受け取り、スライドショー中に再生するためテレビに保存します（あなたが作ったフォルダに整理されます）。</li>
+</ul>
+
+<h2>2. データの使い方</h2>
+<p>あなたのテレビでスライドショーを作成・表示するためだけに使います。HappyM は写真、音楽、認証情報を HappyM や第三者のサーバーに<strong>送信しません</strong>。広告を<strong>表示せず</strong>、利用状況の分析も<strong>行わず</strong>、データを<strong>販売・共有しません</strong>。</p>
+
+<h2>3. データの保存場所</h2>
+<ul>
+<li>写真、音楽、設定：テレビ内のアプリの内部ストレージ。</li>
+<li>ログインの際、スマートフォンは HappyM の静的なページ（<code>darkfl-source.github.io/happym-site/oauth/callback.html</code>）を経由します。このページは Google の応答をローカルネットワーク上のテレビに転送するだけで、情報を保存したりほかの場所に送ったりしません。また、このページを通る認可コードは、テレビの外に出ることのない秘密の値（PKCE）と組み合わせないと使えません。</li>
+<li>音楽の送信は、ローカルネットワーク上でスマートフォンとテレビの間で直接行われ、毎回変わる短いコードで保護されます。送信画面を開いている間だけ有効です。</li>
+</ul>
+
+<h2>4. データの削除方法</h2>
+<ul>
+<li><strong>スライドショーを削除</strong>すると、その写真がテレビから削除されます。</li>
+<li>ライブラリで<strong>曲やフォルダを削除</strong>すると、ファイルがテレビから削除されます。</li>
+<li><strong>設定 → アカウントの接続を解除</strong>で、Google での HappyM のアクセス権を取り消し、テレビの認証情報を削除します。<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> からもアクセス権を取り消せます。</li>
+<li><strong>アプリをアンインストール</strong>すると、アプリのデータはすべてテレビから削除されます。</li>
+</ul>
+
+<h2>5. Google データの利用</h2>
+<p>Google API から受け取った情報の使用およびほかのアプリへの転送は、限定使用の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>に従います。</p>
+
+<h2>6. お子様について</h2>
+<p>HappyM はお子様を対象としておらず、ユーザーを特定するためのデータを収集しません。</p>
+
+<h2>7. 変更とお問い合わせ</h2>
+<p>このポリシーを変更する場合は、更新日とともにこのページで公開します。お問い合わせ：<a href="https://github.com/DarkFl-source/happym-site/issues">GitHub で会話を開始</a>。</p>
+</main></body></html>

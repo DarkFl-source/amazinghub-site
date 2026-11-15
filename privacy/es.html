@@ -1,0 +1,47 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>HappyM — Política de privacidad</title><style>
+body{font-family:system-ui,sans-serif;background:#1B1530;color:#eee;margin:0;padding:24px;line-height:1.55}
+main{max-width:760px;margin:0 auto} h1{color:#fff} h2{color:#C9B6FF;margin-top:1.8em} a{color:#FFC857}
+li{margin:.3em 0} .muted{color:#aaa}
+</style></head>
+<body><main>
+<p class="lang"><a href="index.html">Português</a> · <a href="en.html">English</a> · <a href="es.html">Español</a> · <a href="ja.html">日本語</a> · <a href="zh-TW.html">繁體中文</a></p>
+<h1>Política de privacidad de HappyM</h1>
+<p class="muted">Última actualización: 15 de noviembre de 2026</p>
+<p>HappyM es una app para Android TV que muestra, como presentación, fotos que <strong>tú eliges</strong> en Google Fotos, con música que <strong>tú envías</strong> desde tu teléfono. HappyM <strong>no tiene servidores</strong>: todo lo que la app guarda queda en tu propia TV.</p>
+
+<h2>1. Datos a los que accede HappyM</h2>
+<ul>
+<li><strong>Fotos que seleccionas en Google Fotos.</strong> HappyM usa la API Google Photos Picker con el permiso <code>photospicker.mediaitems.readonly</code>, que da acceso <em>solo</em> a las fotos que eliges en cada selección. La app no puede ver el resto de tu biblioteca.</li>
+<li><strong>Datos de las fotos seleccionadas:</strong> el archivo de la imagen (reducido para la pantalla de la TV), la fecha y las dimensiones, usados para mostrar y ordenar la presentación.</li>
+<li><strong>Credencial de acceso de Google:</strong> un token de actualización (refresh token), guardado <strong>cifrado</strong> en la TV con una clave del sistema (Android Keystore), para que no tengas que conectarte de nuevo cada vez.</li>
+<li><strong>Canciones que envías desde tu teléfono</strong> por la red Wi-Fi local, guardadas en la TV (organizadas en las carpetas que tú creas) para sonar durante las presentaciones.</li>
+</ul>
+
+<h2>2. Cómo se usan los datos</h2>
+<p>Solo para crear y mostrar tus presentaciones en tu TV. HappyM <strong>no</strong> envía fotos, música ni credenciales a ningún servidor de HappyM ni de terceros, <strong>no</strong> muestra publicidad, <strong>no</strong> hace análisis de uso y <strong>no</strong> vende ni comparte datos.</p>
+
+<h2>3. Dónde quedan los datos</h2>
+<ul>
+<li>Fotos, música y ajustes: en el almacenamiento interno de la app, en tu TV.</li>
+<li>Durante el inicio de sesión, tu teléfono pasa por una página estática de HappyM (<code>darkfl-source.github.io/happym-site/oauth/callback.html</code>) que solo reenvía la respuesta de Google a tu TV en la red local. Esa página no guarda ni envía información a ningún otro lugar, y el código de autorización que pasa por ella solo funciona junto con un secreto que nunca sale de la TV (PKCE).</li>
+<li>El envío de música ocurre directamente entre tu teléfono y tu TV, por la red local, protegido por un código corto que cambia en cada uso, y solo funciona mientras la pantalla de envío está abierta.</li>
+</ul>
+
+<h2>4. Cómo borrar tus datos</h2>
+<ul>
+<li><strong>Eliminar una presentación</strong> borra sus fotos de la TV.</li>
+<li><strong>Eliminar una canción o una carpeta</strong> en la Biblioteca borra los archivos de la TV.</li>
+<li><strong>Ajustes → Desconectar cuenta</strong> revoca el acceso de HappyM en Google y borra la credencial de la TV. También puedes revocar el acceso en <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li><strong>Desinstalar la app</strong> borra todos sus datos de la TV.</li>
+</ul>
+
+<h2>5. Uso de los datos de Google</h2>
+<p>El uso y la transferencia a cualquier otra app de la información recibida de las API de Google cumplen la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos del Usuario de los Servicios de API de Google</a>, incluidos los requisitos de Uso Limitado.</p>
+
+<h2>6. Niños</h2>
+<p>HappyM no está dirigida a niños y no recopila datos para identificar a ningún usuario.</p>
+
+<h2>7. Cambios y contacto</h2>
+<p>Los cambios en esta política se publicarán en esta página, con la fecha actualizada. Dudas: <a href="https://github.com/DarkFl-source/happym-site/issues">abre una conversación en GitHub</a>.</p>
+</main></body></html>
