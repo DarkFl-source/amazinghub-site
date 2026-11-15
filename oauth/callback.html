@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>HappyM — conectando à TV</title>
+<style>
+  body { font-family: system-ui, sans-serif; background:#1B1530; color:#fff; display:flex; min-height:100vh;
+         align-items:center; justify-content:center; margin:0; padding:16px; text-align:center; }
+  .box { max-width: 420px; }
+  a { color:#FFC857; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>HappyM</h1>
+  <p id="msg">Enviando a autorização para a sua TV…</p>
+</div>
+<script>
+// Esta página só repassa a resposta do Google para a TV na rede local.
+// Ela não guarda nada e não envia nada para nenhum outro servidor.
+// O "code" sozinho é inútil: a TV precisa do code_verifier (PKCE), que nunca sai dela.
+(function () {
+  var msg = document.getElementById('msg');
+  var p = new URLSearchParams(location.search);
+  var state = p.get('state') || '';
+  var dot = state.indexOf('.');
+  var addr = '';
+  try {
+    addr = atob(state.slice(0, dot).replace(/-/g, '+').replace(/_/g, '/'));
+  } catch (e) { addr = ''; }
+  // Aceita só endereços de rede local no formato IP:porta.
+  var ok = /^(10|172\.(1[6-9]|2\d|3[01])|192\.168)\.\d{1,3}\.\d{1,3}(\.\d{1,3})?:\d{2,5}$/.test(addr)
+        || /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d{2,5}$/.test(addr) && /^(10\.|172\.|192\.168\.)/.test(addr);
+  if (dot < 1 || !ok) {
+    msg.textContent = 'Não foi possível identificar a TV. Volte para a TV e tente de novo.';
+    return;
+  }
+  var q = new URLSearchParams();
+  ['code', 'state', 'error'].forEach(function (k) { if (p.get(k)) q.set(k, p.get(k)); });
+  history.replaceState(null, '', location.pathname); // tira o code da barra de endereço/histórico
+  location.replace('http://' + addr + '/callback?' + q.toString());
+})();
+</script>
+</body>
+</html>
