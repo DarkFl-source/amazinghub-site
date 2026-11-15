@@ -13,6 +13,7 @@ li{margin:.3em 0} .muted{color:#aaa}
 <h2>1. HappyM がアクセスするデータ</h2>
 <ul>
 <li><strong>Google フォトで選んだ写真。</strong>HappyM は Google Photos Picker API を <code>photospicker.mediaitems.readonly</code> 権限で使用します。この権限でアクセスできるのは、選択のたびにあなたが選んだ写真<em>だけ</em>です。ライブラリのほかの写真は見えません。</li>
+<li><strong>選んだ動画</strong>（「動画を含める」がオンのとき）：写真と同じようにテレビにダウンロードされ、動画の1コマがサムネイルに使われます。</li>
 <li><strong>選んだ写真のデータ：</strong>画像ファイル（テレビの画面サイズに縮小）、日付、サイズ。スライドショーの表示と並べ替えに使います。</li>
 <li><strong>Google のアクセス認証情報：</strong>更新トークン（refresh token）。毎回接続し直さなくて済むよう、システムの鍵（Android Keystore）で<strong>暗号化</strong>してテレビに保存します。</li>
 <li><strong>スマートフォンから送った曲。</strong>ローカルの Wi-Fi 経由で受け取り、スライドショー中に再生するためテレビに保存します（あなたが作ったフォルダに整理されます）。</li>

@@ -13,6 +13,7 @@ li{margin:.3em 0} .muted{color:#aaa}
 <h2>1. HappyM 存取的資料</h2>
 <ul>
 <li><strong>你在 Google 相簿中選擇的相片。</strong>HappyM 透過 Google Photos Picker API 使用 <code>photospicker.mediaitems.readonly</code> 權限，<em>只</em>能存取你每次選擇的相片，無法看到相簿中的其他內容。</li>
+<li><strong>你選擇的影片</strong>（開啟「包含影片」時）：會像相片一樣下載到電視上，並以影片中的一個畫面作為縮圖。</li>
 <li><strong>所選相片的資料：</strong>圖片檔案（縮小為電視畫面大小）、日期和尺寸，用於顯示與排序幻燈片。</li>
 <li><strong>Google 存取憑證：</strong>更新權杖（refresh token），以系統金鑰（Android Keystore）<strong>加密</strong>後儲存在電視上，讓你不必每次重新連結。</li>
 <li><strong>你從手機傳送的歌曲</strong>，透過區域 Wi-Fi 接收並儲存在電視上（依你建立的資料夾整理），在幻燈片播放時使用。</li>

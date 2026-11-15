@@ -13,6 +13,7 @@ li{margin:.3em 0} .muted{color:#aaa}
 <h2>1. Datos a los que accede HappyM</h2>
 <ul>
 <li><strong>Fotos que seleccionas en Google Fotos.</strong> HappyM usa la API Google Photos Picker con el permiso <code>photospicker.mediaitems.readonly</code>, que da acceso <em>solo</em> a las fotos que eliges en cada selección. La app no puede ver el resto de tu biblioteca.</li>
+<li><strong>Videos que seleccionas</strong>, cuando la opción “Incluir videos” está activada: se descargan a la TV como las fotos, con un fotograma del video usado como miniatura.</li>
 <li><strong>Datos de las fotos seleccionadas:</strong> el archivo de la imagen (reducido para la pantalla de la TV), la fecha y las dimensiones, usados para mostrar y ordenar la presentación.</li>
 <li><strong>Credencial de acceso de Google:</strong> un token de actualización (refresh token), guardado <strong>cifrado</strong> en la TV con una clave del sistema (Android Keystore), para que no tengas que conectarte de nuevo cada vez.</li>
 <li><strong>Canciones que envías desde tu teléfono</strong> por la red Wi-Fi local, guardadas en la TV (organizadas en las carpetas que tú creas) para sonar durante las presentaciones.</li>
