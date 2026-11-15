@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>HappyM — Privacy Policy</title><style>
+body{font-family:system-ui,sans-serif;background:#1B1530;color:#eee;margin:0;padding:24px;line-height:1.55}
+main{max-width:760px;margin:0 auto} h1{color:#fff} h2{color:#C9B6FF;margin-top:1.8em} a{color:#FFC857}
+li{margin:.3em 0} .muted{color:#aaa}
+</style></head>
+<body><main>
+<p><a href="index.html">Versão em português</a></p>
+<h1>HappyM Privacy Policy</h1>
+<p class="muted">Last updated: November 15, 2026</p>
+<p>HappyM is an Android TV app that shows, as a slideshow, photos that <strong>you pick</strong> in Google Photos, with
+music that <strong>you send</strong> from your phone. HappyM <strong>has no servers</strong>: everything the app stores
+stays on your own TV.</p>
+
+<h2>1. Data HappyM accesses</h2>
+<ul>
+<li><strong>Photos you select in Google Photos.</strong> HappyM uses the Google Photos Picker API with the
+<code>photospicker.mediaitems.readonly</code> permission, which grants access <em>only</em> to the photos you pick in each
+selection. The app cannot see the rest of your library.</li>
+<li><strong>Selected photo data:</strong> the image file (resized for the TV screen), its date and dimensions, used to
+display and order the show.</li>
+<li><strong>Google access credential:</strong> a refresh token stored <strong>encrypted</strong> on the TV with a system
+key (Android Keystore), so you do not have to connect again every time.</li>
+<li><strong>Songs you send from your phone</strong> over the local Wi-Fi network, stored on the TV to play during shows.</li>
+</ul>
+
+<h2>2. How data is used</h2>
+<p>Only to create and display your photo shows on your TV. HappyM does <strong>not</strong> send photos, music or
+credentials to any HappyM or third-party server, does <strong>not</strong> show ads, does <strong>not</strong> run
+analytics and does <strong>not</strong> sell or share data.</p>
+
+<h2>3. Where data is kept</h2>
+<ul>
+<li>Photos, music and settings: in the app's internal storage on your TV.</li>
+<li>During sign-in, your phone passes through a static HappyM page (<code>darkfl-source.github.io/happym-site/oauth/callback.html</code>) that only forwards Google's
+response to your TV on the local network. That page does not store or send any information anywhere else, and the
+authorization code that passes through it only works together with a secret that never leaves the TV (PKCE).</li>
+<li>Sending music happens directly between your phone and your TV on the local network, protected by a one-time code,
+and only works while the sending screen is open.</li>
+</ul>
+
+<h2>4. Deleting your data</h2>
+<ul>
+<li><strong>Deleting a photo show</strong> removes its photos from the TV.</li>
+<li><strong>Deleting a song</strong> in the Library removes the file from the TV.</li>
+<li><strong>Settings → Disconnect account</strong> revokes HappyM's access at Google and deletes the credential from the
+TV. You can also revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li><strong>Uninstalling the app</strong> removes all its data from the TV.</li>
+</ul>
+
+<h2>5. Use of Google data</h2>
+<p>HappyM's use and transfer to any other app of information received from Google APIs will adhere to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>6. Children</h2>
+<p>HappyM is not directed to children and does not collect data to identify any user.</p>
+
+<h2>7. Changes and contact</h2>
+<p>Changes to this policy will be posted on this page with an updated date. Questions:
+<a href="https://github.com/DarkFl-source/happym-site/issues">open a discussion on GitHub</a>.</p>
+</main></body></html>
