@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>HappyScreen — 隱私權政策</title><style>
+body{font-family:system-ui,sans-serif;background:#1B1530;color:#eee;margin:0;padding:24px;line-height:1.55}
+main{max-width:760px;margin:0 auto} h1{color:#fff} h2{color:#C9B6FF;margin-top:1.8em} a{color:#FFC857}
+li{margin:.3em 0} .muted{color:#aaa}
+</style></head>
+<body><main>
+<p class="lang"><a href="index.html">Português</a> · <a href="en.html">English</a> · <a href="es.html">Español</a> · <a href="ja.html">日本語</a> · <a href="zh-TW.html">繁體中文</a></p>
+<h1>HappyScreen 隱私權政策</h1>
+<p class="muted">最後更新：2026 年 11 月 15 日</p>
+<p>HappyScreen 是一款 Android TV 應用程式，以幻燈片方式播放<strong>你在 Google 相簿中選擇</strong>的相片，並搭配<strong>你從手機傳送</strong>的音樂。HappyScreen <strong>沒有伺服器</strong>：應用程式儲存的所有內容都只留在你自己的電視上。</p>
+
+<h2>1. HappyScreen 存取的資料</h2>
+<ul>
+<li><strong>你在 Google 相簿中選擇的相片。</strong>HappyScreen 透過 Google Photos Picker API 使用 <code>photospicker.mediaitems.readonly</code> 權限，<em>只</em>能存取你每次選擇的相片，無法看到相簿中的其他內容。</li>
+<li><strong>你選擇的影片</strong>（開啟「包含影片」時）：會像相片一樣下載到電視上，並以影片中的一個畫面作為縮圖。</li>
+<li><strong>所選相片的資料：</strong>圖片檔案（縮小為電視畫面大小）、日期和尺寸，用於顯示與排序幻燈片。</li>
+<li><strong>Google 存取憑證：</strong>更新權杖（refresh token），以系統金鑰（Android Keystore）<strong>加密</strong>後儲存在電視上，讓你不必每次重新連結。</li>
+<li><strong>你從手機傳送的歌曲</strong>，透過區域 Wi-Fi 接收並儲存在電視上（依你建立的資料夾整理），在幻燈片播放時使用。</li>
+</ul>
+
+<h2>2. 資料的用途</h2>
+<p>僅用於在你的電視上建立和播放幻燈片。HappyScreen <strong>不會</strong>將相片、音樂或憑證傳送到 HappyScreen 或任何第三方的伺服器，<strong>不會</strong>顯示廣告，<strong>不會</strong>進行使用分析，也<strong>不會</strong>出售或分享資料。</p>
+
+<h2>3. 資料儲存位置</h2>
+<ul>
+<li>相片、音樂和設定：儲存在電視上應用程式的內部儲存空間。</li>
+<li>登入時，你的手機會經過 HappyScreen 的一個靜態頁面（<code>amazinghub.app/happyscreen/oauth/callback.html</code>），該頁面只會把 Google 的回應轉送到區域網路中的電視。它不會儲存資訊，也不會傳送到其他地方；而經過該頁面的授權碼，必須搭配一個從不離開電視的密值（PKCE）才能使用。</li>
+<li>音樂傳送直接在手機與電視之間透過區域網路進行，並以每次都會改變的短代碼保護，只有在傳送畫面開啟時才有效。</li>
+</ul>
+
+<h2>4. 如何刪除你的資料</h2>
+<ul>
+<li><strong>刪除幻燈片</strong>會從電視上刪除它的相片。</li>
+<li>在音樂庫中<strong>刪除歌曲或資料夾</strong>會從電視上刪除檔案。</li>
+<li><strong>設定 → 中斷帳戶連結</strong>會撤銷 HappyScreen 在 Google 的存取權，並刪除電視上的憑證。你也可以在 <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> 撤銷存取權。</li>
+<li><strong>解除安裝應用程式</strong>會從電視上刪除它的所有資料。</li>
+</ul>
+
+<h2>5. Google 資料的使用</h2>
+<p>HappyScreen 對從 Google API 取得之資訊的使用及傳輸至其他應用程式，均遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服務使用者資料政策</a>，包括「有限使用」的規定。</p>
+
+<h2>6. 兒童</h2>
+<p>HappyScreen 並非以兒童為對象，也不會收集可識別任何使用者的資料。</p>
+
+<h2>7. 變更與聯絡方式</h2>
+<p>本政策如有變更，將在此頁面公布並更新日期。如有疑問：<a href="mailto:contato@amazinghub.app">contato@amazinghub.app</a>。</p>
+</main></body></html>
